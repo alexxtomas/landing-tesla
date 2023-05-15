@@ -1,0 +1,25 @@
+---
+import SectionLayout from "../../layouts/SectionLayout.astro";
+---
+
+<SectionLayout
+  title="Disfrute de tesla"
+  subtitle="Programe una prueba de conducción hoy mismo"
+  color="#fff"
+>
+    <a
+      slot="footer"
+      class="border-[3px] w-fit  border-white bg-white/5 backdrop-blur-sm text-sm rounded font-medium text-white px-12 py-2  hover:bg-white hover:text-black transition-colors"
+      href="#"
+    >
+      Prueba de conducción</a
+    >
+
+  <video
+    slot="background"
+    class="object-center object-cover h-full w-full"
+    autoplay
+    muted
+    loop
+    src="/video.webm"></video>
+</SectionLayout>

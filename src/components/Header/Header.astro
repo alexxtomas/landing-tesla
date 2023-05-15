@@ -1,0 +1,37 @@
+---
+import { HEADER_LINKS_LIST_1, HEADER_LINKS_LIST_2 } from '../../utils/constants';
+import HeaderLinksList from './components/HeaderLinksList.astro';
+import HeaderTeslaLogo from './components/HeaderTeslaLogo.astro';
+
+
+---
+
+
+<header id="landing-header" class="flex justify-between px-10 py-3 z-50 fixed top-0 w-full  text-white">
+  <h1 class="flex flex-grow basis-0">
+    <HeaderTeslaLogo />
+  </h1>
+  <nav>
+  <HeaderLinksList  links={HEADER_LINKS_LIST_1}/>
+</nav>
+  <nav class="flex flex-grow basis-0 justify-end">
+    <HeaderLinksList links={HEADER_LINKS_LIST_2}/>
+  </nav>
+
+  <div
+    id="menu-backdrop"
+    class={`
+      absolute bg-black/5 backdrop-blur-lg rounded
+      translate-x-[var(--left)] translate-y-[var(--top)]
+      left-0 top-0
+      w-[var(--width)] h-[var(--height)]
+      transition-all duration-500
+      ease-in-out opacity-0 -z-10
+    `}
+  >
+  </div>
+</header>
+
+<script src="./scripts/menuBackdrop.ts" />
+
+<script src="./scripts/observer.ts"/>
